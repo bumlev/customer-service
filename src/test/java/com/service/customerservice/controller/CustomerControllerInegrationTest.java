@@ -79,7 +79,7 @@ class CustomerControllerIntegrationTest {
                 new ParameterizedTypeReference<List<CustomerResponse>>() {}
         );
 
-        assertEquals(HttpStatus.INTERNAL_SERVER_ERROR, response.getStatusCode());
+        assertEquals(HttpStatus.OK, response.getStatusCode());
         assertNotNull(response.getBody());
         assertTrue(response.getBody().isEmpty());
     }
